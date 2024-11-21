@@ -40,7 +40,7 @@ if (mail($destinataire, $objet, $message, $headers)) // Envoi du message
 }
 else // Non envoyé
 {
-    echo "Votre message n'a pas pu être envoyé";
+    echo "Votre message n'a pas pu être gerer";
 }
 ?>
 </body>
