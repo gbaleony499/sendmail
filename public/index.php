@@ -1,7 +1,7 @@
 <?php
 
 
-$data = json_decode(file_get_contents(__DIR__ . "/assets/datas/data.json"), true);
+$data = json_decode(file_get_contents(__DIR__ . "/vercel.json"), true);
 
 ?>
 <!DOCTYPE html>
