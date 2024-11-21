@@ -1,7 +1,7 @@
 <?php
 
 
-$data = json_decode(file_get_contents(__DIR__ . "/assets/datas/data.json"), true);
+
 
 $destinataire = 'kouame.ksma@gmail.com';
 // Pour les champs $expediteur / $copie / $destinataire, séparer par une virgule s'il y a plusieurs adresses
