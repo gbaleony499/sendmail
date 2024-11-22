@@ -18,7 +18,7 @@
         "dest": "/public/assets/img/$1"
       },
       {
-        "src": "/assets/datas/data.json",
+        "src": "/assets/datas/data.php",
         "dest": "/public/assets/datas/data.php"
       },
       {
@@ -26,37 +26,4 @@
         "dest": "/api/index.php"
       }
     ]
-}
-{
-    "name": "phpmailer/phpmailer",
-    "type": "library",
-    "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-    "authors": [
-        {
-            "name": "Jim Jagielski",
-            "email": "jimjag@gmail.com"
-        },
-        {
-            "name": "Marcus Bointon",
-            "email": "phpmailer@synchromedia.co.uk"
-        },
-        {
-            "name": "Andy Prevost",
-            "email": "codeworxtech@users.sourceforge.net"
-        },
-        {
-            "name": "Brent R. Matzelle"
-        }
-    ],
-    "require": {
-        "php": ">=5.0.0"
-    },
-    "require-dev": {
-        "phpdocumentor/phpdocumentor": "*",
-        "phpunit/phpunit": "*"
-    },
-    "autoload": {
-        "classmap": ["class.phpmailer.php", "class.pop3.php", "class.smtp.php"]
-    },
-    "license": "LGPL-2.1"
 }
