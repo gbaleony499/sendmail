@@ -19,7 +19,7 @@
       },
       {
         "src": "/assets/datas/data.json",
-        "dest": "/public/assets/datas/data.json"
+        "dest": "/public/assets/datas/data.php"
       },
       {
         "src": "/(.*)",
