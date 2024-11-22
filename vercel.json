@@ -9,14 +9,7 @@
         "src": "/api/index.php",
         "dest": "/api/index.php"
       },
-      {
-        "src": "/style.css",
-        "dest": "/public/style.css"
-      },
-      {
-        "src": "/assets/img/(.*).png",
-        "dest": "/public/assets/img/$1"
-      },
+     
       {
         "src": "/assets/datas/data.php",
         "dest": "/public/assets/datas/data.php"
