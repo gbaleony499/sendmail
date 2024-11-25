@@ -1,6 +1,5 @@
 {
-  "name": "php-project",
-  "description": "Un projet PHP de test",
-  "type": "project",
-  "require": {}
+    "require": {
+        "php": "^8.0"
+    }
 }
