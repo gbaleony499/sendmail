@@ -1,6 +1,6 @@
 <?php
 
-$data = json_decode(file_get_contents(__DIR__ . "/assets/datas/data.json"), true);
+$data = json_decode(file_get_contents(__DIR__ . '/../assets/datas/data.json'), true);
 
 if ($data === null) {
     echo "Erreur : impossible de lire ou de décoder le fichier JSON.";
@@ -11,7 +11,7 @@ $destinataire = 'kouame.ksma@gmail.com';
 $expediteur = 'denis.laforce@gmail.com';
 $copie = 'kouame.ksma@gmail.com';
 $copie_cachee = 'kouame.ksma@gmail.com';
-$objet = 'Test';
+$objet = 'Test'; 
 $headers  = 'MIME-Version: 1.0' . "\n";
 $headers .= 'Content-type: text/html; charset=UTF-8' . "\n";
 $headers .= 'Reply-To: '.$expediteur . "\n";
