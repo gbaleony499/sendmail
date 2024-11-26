@@ -1,8 +1,8 @@
 <?php
 // Vu qu'on utilisera PHPMailer, on importe ses fichiers
-require_once('PHPMailer/Exception.php');
-require_once('PHPMailer/PHPMailer.php');
-require_once('PHPMailer/SMTP.php');
+require_once __DIR__ . '/PHPMailer/PHPMailer.php';
+require_once __DIR__ . '/PHPMailer/SMTP.php';
+require_once __DIR__ . '/PHPMailer/Exception.php';
 
 // PHPMailer est un PHP Orienté Objet
 // On appelle les classes Exception et PHPMailer
