@@ -33,7 +33,15 @@ const mailOptions = {
 transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
         console.log('Erreur :', error);
+        return {
+            statusCode: 500,
+            body: JSON.stringify({ message: 'Erreur lors de l\'envoi du mail', error: error.toString() })
+        };
     } else {
         console.log('Votre message a bien été envoyé :', info.response);
+        return {
+            statusCode: 200,
+            body: JSON.stringify({ message: 'Votre message a bien été envoyé', response: info.response })
+        };
     }
 });
