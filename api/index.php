@@ -1,7 +1,13 @@
 <?php
 
-$data = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/assets/datas/data.json'), true);
+$dataPath = $_SERVER['DOCUMENT_ROOT'] . '/assets/datas/data.json';
 
+if (!file_exists($dataPath)) {
+    echo "Erreur : le fichier JSON est introuvable.";
+    exit;
+}
+
+$data = json_decode(file_get_contents($dataPath), true);
 
 if ($data === null) {
     echo "Erreur : impossible de lire ou de décoder le fichier JSON.";
