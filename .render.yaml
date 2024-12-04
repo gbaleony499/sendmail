@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: mailer-service
-    env: php
-    region: oregon   # ou la région de votre choix
-    buildCommand: "" # Aucune commande de construction nécessaire pour PHP
-    startCommand: php -S 0.0.0.0:10000 # Lance un serveur PHP intégré
-    plan: free
