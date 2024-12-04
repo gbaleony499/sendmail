@@ -1,6 +1,7 @@
 <?php
 
-$data = json_decode(file_get_contents(__DIR__ . '/../assets/datas/data.json'), true);
+$data = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/assets/datas/data.json'), true);
+
 
 if ($data === null) {
     echo "Erreur : impossible de lire ou de décoder le fichier JSON.";
