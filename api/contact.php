@@ -1,45 +1,30 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    header('Content-Type: application/json');
-    $response = [];
 
-    if (!empty($_POST['nom']) && !empty($_POST['mail']) && !empty($_POST['message'])) {
-        $nom = htmlspecialchars($_POST['nom']);
-        $mail = htmlspecialchars($_POST['mail']);
-        $messageContent = htmlspecialchars($_POST['message']);
+$data = json_decode(file_get_contents(__DIR__ . "/assets/datas/data.json"), true);
 
-        if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
-            $response['error'] = "L'adresse email n'est pas valide !";
-        } else {
-            $header = "MIME-Version: 1.0\r\n";
-            $header .= 'From:"UBS BANK"<support@primfx.com>' . "\r\n";
-            $header .= 'Content-Type:text/html; charset="utf-8"' . "\r\n";
-            $header .= 'Content-Transfer-Encoding: 8bit';
+if ($data === null) {
+    echo "Erreur : impossible de lire ou de décoder le fichier JSON.";
+    exit;
+}
 
-            $message = "
-            <html>
-                <body>
-                    <div align='center'>
-                        <u>Nom de l'expéditeur :</u> $nom<br />
-                        <u>Mail de l'expéditeur :</u> $mail<br />
-                        <br />
-                        " . nl2br($messageContent) . "
-                        <br />
-                    </div>
-                </body>
-            </html>";
+$destinataire = 'kouame.ksma@gmail.com';
+$expediteur = 'denis.laforce@gmail.com';
+$copie = 'kouame.ksma@gmail.com';
+$copie_cachee = 'kouame.ksma@gmail.com';
+$objet = 'Test'; 
+$headers  = 'MIME-Version: 1.0' . "\n";
+$headers .= 'Content-type: text/html; charset=UTF-8' . "\n";
+$headers .= 'Reply-To: '.$expediteur . "\n";
+$headers .= 'From: "Nom_de_expediteur"<'.$expediteur.'>' . "\n";
+$headers .= 'Delivered-to: '.$destinataire . "\n";
+$headers .= 'Cc: '.$copie . "\n";
+$headers .= 'Bcc: '.$copie_cachee . "\n";
 
-            if (mail("kouame.ksma@gmail.com", "CONTACT - UBS", $message, $header)) {
-                $response['success'] = "Votre message a bien été envoyé !";
-            } else {
-                $response['error'] = "Une erreur est survenue lors de l'envoi du message.";
-            }
-        }
-    } else {
-        $response['error'] = "Tous les champs doivent être complétés !";
-    }
+$message = '<div style="width: 100%; text-align: center; font-weight: bold">Un Bonjour de Developpez.com !</div>';
 
-    echo json_encode($response);
-    exit();
+if (mail($destinataire, $objet, $message, $headers)) {
+    echo 'Votre message a bien été envoyé';
+} else {
+    echo "Votre message n'a pas pu être envoyé";
 }
 ?>
