@@ -1,0 +1,284 @@
+html {
+    font: normal 100.01%/1.5 sans-serif;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 100.01%;
+    line-height: 1.5;
+    font-family: sans-serif;
+    color: #222;
+    height: 100%;
+    -webkit-text-size-adjust: 100%;
+    min-width: 320px;
+    direction: ltr;
+}
+ body{
+    margin: 0px;
+    padding: 0px;
+}
+ /* debut des css des colone*/
+.filleescalier{
+    background-image: url(https://www.ubs.com/content/experience-fragments/ch/en/homepage/quick-access/master/jcr%3acontent/root/quickaccess_copy/image-l.coreimg.82.3840.png/1587049972763.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    padding-top: 8px;
+    margin-top: -4px;
+
+}
+.itemsitetexteetimage #entete{
+    padding-top: 15px;
+
+}
+.bouton{
+    border: 1px solid #6d7f3c;
+    background-color:#6d7f3c;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 100%;
+
+
+}
+.marginbotom{
+    margin-bottom: 10px;
+
+}
+.imagecarte{
+    width: 30px;
+}
+
+.coloneavecimageettexte{
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+
+img{
+    max-width: 100%;
+}
+
+
+
+
+.colonetexte{
+    display: flex;
+    flex-flow: row wrap;
+}
+.colonetextesize{
+    width: 25%;
+    margin-left: 50px;
+    font-size: 100%;
+}
+.testeentete{
+    margin-left: 50px;
+    font-size: 20px;
+}
+.petiticoneavectex{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.petiticoneavectexsize{
+    width: 16%;
+
+}
+
+.itemsitetexteetimage{
+    width: 50%;
+
+}
+.image50{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.image5{
+    width: 100%;
+}
+.pixel16{
+    font-size: 100%;
+}
+ /* fin des css des colone*/
+ .textealignie{
+     text-align: center;
+     padding-top: 20px;
+
+ }
+ 
+
+
+ .logo{
+     width: 80px;
+     padding-left: 30px;
+     padding-top: 5px ;
+ }
+  /* menu de naviigation */
+  .clea{
+      clear: both;
+  }
+nav{
+    width: 100%;
+    background-color: rgb(226, 226, 226);
+    margin-top: 10px;
+
+}
+  /* enléver les puce de menu */
+nav li{
+    list-style-type:none ;
+}
+nav > ul{
+    margin: 0px;
+    padding: 0px;
+    padding-left: 12px;
+
+}
+nav > ul > li{
+    float: left;
+    position: relative;
+}
+
+  /* suprimer lheritage pour pouvoir donner la hauteur et largeur du menu */
+nav > ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+  /* cacher le checkbox du menu */
+nav input[type=checkbox]{
+    display:none ;
+}
+  /* cacher le label du menu */
+
+nav label{
+    display: none;
+}
+nav a{
+    display: inline-block;
+    text-decoration: none;
+
+}
+nav ul li:hover{
+    border: 1px;
+    background-color: #e6000038;
+}
+
+  /* selection des enfant direct des ellement a */
+nav > ul > li > a{
+    padding: 10px 20px;
+    color: #222;
+}
+
+  /* menu responsive quand notre element nav input a été cliquez*/
+nav input[type=checkbox]:checked ~ ul{
+    display: block;
+}
+
+
+footer{
+    background-color: rgb(226, 226, 226);
+    text-align: center;
+    font-size: 100%;
+    padding: 10px;
+}
+
+
+
+  /* menu responsive quand ont clique sur menu qui est un checkbox */
+@media screen and (max-width: 780px){
+    .menu-mobile{
+        display: block;
+        color: #222;
+        background-color: rgb(226, 226, 226);
+        text-align: right;
+        padding: 12px 0px;
+        margin-right: 20px;
+        font-weight: bold;
+    }
+    nav ul{
+        display: none;
+    }
+    nav ul li, nav ul li a{
+        width: 100%;
+    }
+    
+}     /* menu responsive tous ce qui conserne l'entete du menu */
+
+@media screen and (max-width: 627px){
+    .coloneavecimageettexte{
+        display: initial;
+        flex-flow: row wrap;
+        margin-left: 50px;
+        margin-right: 50px;
+    
+    }
+    .pixel{
+        margin-right: 50px;
+    }
+    
+    .itemsitetexteetimage{
+    width: 100%;
+
+    }
+    .image50{
+    width: 100%;
+    margin-bottom: 0px;
+    height: auto;
+    }
+    .image5{
+    width: 100%;
+    margin-top: 10px;
+    height: auto;
+
+    }
+    .pixel16{
+    font-size: 100%;
+    margin-top: -20px;
+    }
+    
+    .bouton{
+    border: 1px solid #6d7f3c;
+    background-color:#6d7f3c;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 15px;
+
+
+    }
+    .coloneavecimageettext{
+        text-align: center;
+    }
+    .itemsitetexteetimage #entete{
+        padding-top: 0px;
+        margin-top: -20px;
+    }
+    .colonetexte{
+        display: initial
+    }
+    .colonetextesize {
+        width: 70%;
+        margin-left: 50px;
+        font-size: 100%;
+        margin-right: 50px;
+       /** text-align: center;*/
+    }
+    .displaynone{
+        display: none;
+    }
+    .logo{
+        width: 80px;
+        padding-left: 30px;
+        padding-top: 5px ;
+        margin-bottom: 20px;
+
+    }
+    
+ }
